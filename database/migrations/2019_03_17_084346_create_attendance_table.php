@@ -16,7 +16,7 @@ class CreateAttendanceTable extends Migration
         Schema::create('attendance', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('enrollment_id')->unsigned();
-            $table->foreign('enrollment_id')->references('id')->on('enrollment');
+            //$table->foreign('enrollment_id')->references('id')->on('enrollment');
             $table->date('date');
             $table->boolean('present');
             $table->string('attendance_by');

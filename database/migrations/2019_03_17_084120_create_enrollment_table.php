@@ -16,9 +16,9 @@ class CreateEnrollmentTable extends Migration
         Schema::create('enrollment', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('batch_id')->unsigned();
-            $table->foreign('batch_id')->references('id')->on('batch');
+            //$table->foreign('batch_id')->references('id')->on('batch');
             $table->integer('student_id')->unsigned();
-            $table->foreign('student_id')->references('id')->on('student');
+            //$table->foreign('student_id')->references('id')->on('student');
 
             $table->timestamps();
             //Constrains: Unique(batch_id + student_id)
