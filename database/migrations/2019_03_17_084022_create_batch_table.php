@@ -19,7 +19,7 @@ class CreateBatchTable extends Migration
             $table->date('begining_date');
             $table->date('ending_date');
             $table->integer('class_teacher_id')->unsigned();
-            //$table->foreign('class_teacher_id')->references('id')->on('teacher');
+            $table->foreign('class_teacher_id')->references('id')->on('teacher');
             
             $table->timestamps();
             //Constrains: Unique ID, Index on ID, Unique(ID + class-teacher + year)
